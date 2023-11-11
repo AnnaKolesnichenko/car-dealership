@@ -7,13 +7,22 @@ export const StyledContainer = styled.div`
   margin-right: auto;
 `;
 
+export const Container = styled.div`
+  max-width: 1024px;
+  padding: 36px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 export const StyledList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 20px;
   list-style: none;
   padding: 0;
-  padding: 0 40px;
+  /* padding: 0 40px; */
   margin: 0;
 `;
 

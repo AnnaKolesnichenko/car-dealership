@@ -4,6 +4,15 @@ export const StyledHero = styled.section`
   height: 500px;
   width: 100%;
   background-color: #24485b;
+`;
+
+export const Container = styled.div`
+  max-width: 1024px;
+  padding: 36px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

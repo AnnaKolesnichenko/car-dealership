@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
@@ -5,7 +6,12 @@ export const StyledNav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* border-bottom: 2px solid grey; */
+  max-width: 1024px;
+  padding: 36px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const StyledImage = styled.img`
@@ -21,7 +27,7 @@ export const StyledList = styled.ul`
   gap: 50px;
 `;
 
-export const StyledListItem = styled.li`
+export const StyledListItem = styled(Link)`
   font-size: 18px;
   font-weight: bold;
   color: #2e6484;

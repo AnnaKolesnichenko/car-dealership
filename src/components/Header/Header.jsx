@@ -22,7 +22,7 @@ const Header = () => {
       <StyledImage src={logo} alt="car dealership logotype" />
       <div>
         <StyledList>
-          <StyledListItem>Catalog</StyledListItem>
+          <StyledListItem to="/catalog">Catalog</StyledListItem>
           <StyledListItem>Favorites</StyledListItem>
         </StyledList>
       </div>
