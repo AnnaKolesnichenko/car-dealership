@@ -1,15 +1,21 @@
+import { StyledAboutLi, StyledDescription } from './CarListItem.styled';
+
 const CarListItem = ({ car, address }) => {
   return (
-    <ul>
-      <li>{address[1]}</li>
-      <li>{address[2]}</li>
-      <li>{car.rentalCompany}</li>
-      {/* <li>{car.}</li> */}
-      <li>{car.type}</li>
-      <li>{car.make}</li>
-      <li>{car.mileage}</li>
-      <li>{car.accessories[-1]}</li>
-    </ul>
+    <StyledDescription>
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <StyledAboutLi>{address[1]} |</StyledAboutLi>{' '}
+        <StyledAboutLi>| {address[2]} |</StyledAboutLi>{' '}
+        <StyledAboutLi> | {car.rentalCompany} </StyledAboutLi>{' '}
+        {/* <li>{car.}</li> */}
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <StyledAboutLi>{car.type} |</StyledAboutLi>{' '}
+        <StyledAboutLi>| {car.make} | </StyledAboutLi>{' '}
+        <StyledAboutLi>| {car.mileage} | </StyledAboutLi>{' '}
+        <StyledAboutLi>| {car.accessories[-1]}</StyledAboutLi>
+      </div>
+    </StyledDescription>
   );
 };
 

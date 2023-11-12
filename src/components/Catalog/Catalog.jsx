@@ -94,6 +94,7 @@ function Catalog() {
             paddingBottom: '4px',
             paddingTop: '2px',
             border: 'none',
+            fontSize: '24px',
           }}
         />
 
@@ -103,7 +104,7 @@ function Catalog() {
           sx={{
             width: '160px',
             height: '56px',
-            fontSize: '14px',
+            fontSize: '20px',
             fontFamily: 'Manrope',
             textTransform: 'capitalize',
             backgroundColor: '#3470FF',

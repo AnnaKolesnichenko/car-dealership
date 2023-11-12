@@ -6,6 +6,19 @@ export const StyledCarItem = styled.li`
   overflow: hidden;
 `;
 
+export const StyledCarTitle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const StyledCarname = styled.h3`
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+`;
+
 export const StyledCarImg = styled.img`
   width: 401px;
   height: 268px;
