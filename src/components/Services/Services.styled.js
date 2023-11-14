@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
@@ -47,6 +46,7 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledDescription = styled.p`
+  font-family: 'Manrope', sans-serif;
   font-size: 20px;
 `;
 
@@ -60,7 +60,7 @@ export const StyledSpecials = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 100px;
   list-style: none;
   margin: 0;
   margin-top: 20px;
@@ -68,12 +68,13 @@ export const StyledSpecials = styled.ul`
 `;
 
 export const SpecialsItem = styled.li`
-  width: calc((100% - 40px) / 2);
+  width: calc((100% - 140px) / 4);
   border-bottom: 1px solid #7aafcc;
   padding: 7px;
 `;
 
 export const SpecialsTitle = styled.h2`
+  font-family: 'Manrope', sans-serif;
   text-align: center;
   color: #24485c;
   font-size: 36px;
@@ -84,11 +85,13 @@ export const SpecialsTitle = styled.h2`
 `;
 
 export const StyledDescrTitle = styled.h2`
+  font-family: 'Manrope', sans-serif;
   font-size: 18px;
   color: white;
 `;
 
 export const StyledDescrP = styled.p`
+  font-family: 'Manrope', sans-serif;
   color: white;
   font-size: 18px;
 `;

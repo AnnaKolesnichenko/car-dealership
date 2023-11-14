@@ -28,9 +28,31 @@ export const StyledList = styled.ul`
 `;
 
 export const StyledListItem = styled(Link)`
-  font-size: 18px;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
   color: #2e6484;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially, the border has zero width */
+    height: 2px; /* Set the height and color of your border */
+    background-color: #2e6484; /* Set the color of your border */
+    transition: width 0.3s ease; /* Set the transition for width changes */
+  }
+
+  /* Add hover effect to the link */
+  &:hover::before {
+    width: 100%; /* On hover, expand the border to 100% width */
+  }
 `;
 
 export const StyledRegistration = styled.ul`

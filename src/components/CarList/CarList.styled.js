@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { FiHeart } from 'react-icons/fi';
 
 export const StyledCarItem = styled.li`
+  position: relative;
   width: 274px;
   height: 426px;
   overflow: hidden;
+  padding-bottom: 0;
+  border-radius: 14px;
+  margin-bottom: 18px;
 `;
 
 export const StyledCarTitle = styled.div`
@@ -14,9 +19,12 @@ export const StyledCarTitle = styled.div`
 `;
 
 export const StyledCarname = styled.h3`
+  font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 8px;
+  margin-top: 14px;
 `;
 
 export const StyledCarImg = styled.img`
@@ -61,4 +69,25 @@ export const StyledCarList = styled.ul`
   ${StyledCarItem} + ${StyledCarItem} + ${StyledCarItem} + ${StyledCarItem} ${StyledCarImg} {
     margin-left: -44px;
   }
+`;
+
+export const StyledButton = styled.button`
+  width: 100%;
+  background-color: rgb(52, 112, 255);
+  margin-bottom: 0px;
+  padding: 12px 99px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+`;
+
+export const FiHeartStyled = styled(FiHeart)`
+  position: absolute;
+  top: 16px;
+  right: 16px;
 `;

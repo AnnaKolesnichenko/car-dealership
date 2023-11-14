@@ -1,7 +1,6 @@
 import {
   Container,
   StyledHero,
-  StyledImage,
   StyledService,
   StyledServices,
   StyledTitle,

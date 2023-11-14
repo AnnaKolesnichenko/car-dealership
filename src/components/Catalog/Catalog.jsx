@@ -45,6 +45,7 @@ function Catalog() {
                 paddingBottom: '4px',
                 paddingTop: '2px',
                 border: 'none',
+                fontFamily: 'Manrope, sans-serif',
               }}
             />
           )}
@@ -65,6 +66,7 @@ function Catalog() {
                 paddingBottom: '4px',
                 paddingTop: '2px',
                 border: 'none',
+                fontFamily: 'Manrope, sans-serif',
               }}
               // value={price}
               // onChange={e => setPrice(e.target.value)}
@@ -82,6 +84,7 @@ function Catalog() {
             paddingBottom: '4px',
             paddingTop: '2px',
             border: 'none',
+            fontFamily: 'Manrope, sans-serif',
           }}
         />
         <TextField
@@ -95,6 +98,7 @@ function Catalog() {
             paddingTop: '2px',
             border: 'none',
             fontSize: '24px',
+            fontFamily: 'Manrope, sans-serif',
           }}
         />
 
@@ -105,7 +109,7 @@ function Catalog() {
             width: '160px',
             height: '56px',
             fontSize: '20px',
-            fontFamily: 'Manrope',
+            fontFamily: 'Manrope, sans-serif',
             textTransform: 'capitalize',
             backgroundColor: '#3470FF',
             border: 'none',

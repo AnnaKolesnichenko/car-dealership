@@ -12,7 +12,6 @@ import {
   StyledDescrP,
   StyledDescrTitle,
   StyledDescription,
-  StyledIcon,
   StyledItem,
   StyledLink,
   StyledList,

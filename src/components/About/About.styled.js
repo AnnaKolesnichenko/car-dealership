@@ -27,6 +27,7 @@ export const StyledServices = styled.ul`
 `;
 
 export const StyledService = styled.li`
+  font-family: 'Manrope', sans-serif;
   color: white;
   font-size: 22px;
 `;
@@ -38,6 +39,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledTitle = styled.h1`
+  font-family: 'Manrope', sans-serif;
   color: white;
   text-transform: uppercase;
   font-size: 76px;

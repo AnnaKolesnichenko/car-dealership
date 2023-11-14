@@ -1,5 +1,6 @@
 import { CarBase } from 'car-base';
 import {
+  StyledButton,
   StyledCarImg,
   StyledCarItem,
   StyledCarList,
@@ -7,36 +8,54 @@ import {
   StyledCarname,
 } from './CarList.styled';
 import CarListItem from 'components/CarListItem/CarListItem';
-import { LearnMoreBtn } from 'components/Buttons/Buttons';
+import { useState } from 'react';
+import CarItem from 'components/CarItem/CarItem';
 
 const CarList = () => {
+  const [isCarSelected, setIsCarSelected] = useState(false);
+
+  const handleOpenModal = id => {
+    setIsCarSelected(id);
+  };
+
+  const handleCloseModal = () => {
+    setIsCarSelected(null);
+  };
+
   return (
     <div>
+      {isCarSelected && (
+        <CarItem id={isCarSelected} handleCloseModal={handleCloseModal} />
+      )}
       <StyledCarList>
         {CarBase.map(car => {
           const address = car.address.split(',');
 
           return (
             <StyledCarItem key={car.id}>
-              <StyledCarImg src={car.img} alt={car.make} />
+              <div style={{ borderRadius: '14px', display: 'inline-block' }}>
+                <StyledCarImg src={car.img} alt={car.make} />
+              </div>
               <StyledCarTitle>
                 <div>
                   <StyledCarname>
                     {car.make}{' '}
                     <span style={{ color: '#3470FF' }}>
-                      {car.model ? car.model : null}
+                      {car.model ? car.model.slice(0, 11) : null}
                     </span>
                     , {car.year}
                   </StyledCarname>
                 </div>
                 <div>
-                  <span>{car.rentalPrice}</span>
+                  <span style={{ margin: '0px' }}>{car.rentalPrice}</span>
                 </div>
               </StyledCarTitle>
               <div>
                 <CarListItem car={car} address={address} />
               </div>
-              <LearnMoreBtn />
+              <StyledButton onClick={() => handleOpenModal(car.id)}>
+                Learn More
+              </StyledButton>
             </StyledCarItem>
           );
         })}

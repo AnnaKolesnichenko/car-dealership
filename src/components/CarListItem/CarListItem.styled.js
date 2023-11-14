@@ -7,10 +7,12 @@ export const StyledDescription = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 28px;
   overflow: hidden;
 `;
 
 export const StyledAboutLi = styled.li`
+  font-family: 'Manrope', sans-serif;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;

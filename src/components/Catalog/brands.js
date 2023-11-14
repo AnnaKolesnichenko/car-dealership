@@ -20,7 +20,7 @@ export const brandData = [
   'Mercedes-Benz',
   'Chrysler',
   'Kia',
-  'Land',
+  'Land Rover',
 ];
 
 export const priceData = [

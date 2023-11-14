@@ -22,7 +22,7 @@ import pontiac from './images/pontiac_firebird.jpg';
 import subaru from './images/subaru_outback.jpg';
 import volvo_xc60_2 from './images/volvo_xc60_2.jpg';
 import volvo_x60 from './images/volvo_xc60.jpg';
-import volvo_xc90 from './images/volvo_xc90.jpg';
+//import volvo_xc90 from './images/volvo_xc90.jpg';
 
 export const CarBase = [
   {
@@ -55,7 +55,7 @@ export const CarBase = [
     make: 'Volvo',
     model: 'XC90',
     type: 'SUV',
-    img: volvo_xc90,
+    img: volvo_xc60_2,
     description:
       'The Volvo XC90 is a premium SUV that offers exceptional safety, advanced technology, and elegant design.',
     fuelConsumption: '8.3',
@@ -638,7 +638,7 @@ export const CarBase = [
     mileage: 4618,
   },
   {
-    id: 9586,
+    id: 9486,
     year: 2020,
     make: 'Volvo',
     model: 'XC60',
@@ -694,7 +694,7 @@ export const CarBase = [
     mileage: 4856,
   },
   {
-    id: 9630,
+    id: 9430,
     year: 2020,
     make: 'Kia',
     model: 'Rio',
