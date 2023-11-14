@@ -1,13 +1,38 @@
 {
   "files": {
     "main.css": "/car-dealership/static/css/main.7acaea2f.css",
-    "main.js": "/car-dealership/static/js/main.07d3183d.js",
+    "main.js": "/car-dealership/static/js/main.a44cfed9.js",
+    "static/media/bentley_azure.jpg": "/car-dealership/static/media/bentley_azure.6b16e53e68786bc3a10d.jpg",
+    "static/media/mini_convertible.jpg": "/car-dealership/static/media/mini_convertible.b0578d0d2388391155f9.jpg",
+    "static/media/subaru_outback.jpg": "/car-dealership/static/media/subaru_outback.fa12b30a57c0bb789c40.jpg",
+    "static/media/hummer_h2_agu4br.jpg": "/car-dealership/static/media/hummer_h2_agu4br.1e87dca4aa30fcdb7021.jpg",
+    "static/media/volvo_xc60_2.jpg": "/car-dealership/static/media/volvo_xc60_2.718619f12c57bf87e0d3.jpg",
+    "static/media/chrysler_voyager.jpg": "/car-dealership/static/media/chrysler_voyager.0cb2193ee926477837f7.jpg",
+    "static/media/kia_rio_sedan_hatchback.jpg": "/car-dealership/static/media/kia_rio_sedan_hatchback.d5a631167d2575828c2b.jpg",
+    "static/media/bmw_z8.jpg": "/car-dealership/static/media/bmw_z8.110bec185028943d7748.jpg",
+    "static/media/land_rover_range_rover_sport.jpg": "/car-dealership/static/media/land_rover_range_rover_sport.d274a06dd442a9a2a948.jpg",
+    "static/media/pontiac_firebird.jpg": "/car-dealership/static/media/pontiac_firebird.b0711cccbd1dcdbce873.jpg",
+    "static/media/aston_martin_dbs_shnxcz.jpg": "/car-dealership/static/media/aston_martin_dbs_shnxcz.964264ae6ca9b58fa24e.jpg",
+    "static/media/chevrolet_camaro.jpg": "/car-dealership/static/media/chevrolet_camaro.ad414d89595cb2b05bf8.jpg",
+    "static/media/mitsubishi_outlander.jpg": "/car-dealership/static/media/mitsubishi_outlander.14575001e9562498d8c3.jpg",
+    "static/media/gmc_yukon_denali.jpg": "/car-dealership/static/media/gmc_yukon_denali.de2208326f9ae6d563ed.jpg",
+    "static/media/mercedes_sl_class.jpg": "/car-dealership/static/media/mercedes_sl_class.2d2a083295b8e8e5a88e.jpg",
+    "static/media/hyundai_tucson.jpg": "/car-dealership/static/media/hyundai_tucson.382341adbcb605a73c20.jpg",
+    "static/media/lamborghini_murcielago_igcbly.jpg": "/car-dealership/static/media/lamborghini_murcielago_igcbly.28e7183c54f42c81e7e3.jpg",
+    "static/media/kia_rio_hatchback.jpg": "/car-dealership/static/media/kia_rio_hatchback.a5e1fbfb0e4602fcc5b9.jpg",
+    "static/media/nissan_pathfinder.jpg": "/car-dealership/static/media/nissan_pathfinder.705d8c0985f925227ccf.jpg",
+    "static/media/volvo_xc60.jpg": "/car-dealership/static/media/volvo_xc60.70670d2d69b38ed6c1a9.jpg",
+    "static/media/mercedes_slk_class.jpg": "/car-dealership/static/media/mercedes_slk_class.4bce711464b00a09c312.jpg",
+    "static/media/audi_a5.jpg": "/car-dealership/static/media/audi_a5.0894a49d13cde82c585c.jpg",
+    "static/media/lincoln_navigator_l_t2zmka.jpg": "/car-dealership/static/media/lincoln_navigator_l_t2zmka.84a012882befe6cf8e1b.jpg",
+    "static/media/buick_enclave.jpg": "/car-dealership/static/media/buick_enclave.e7df7b68a6b2dfb9bd1c.jpg",
+    "static/media/rent.jpg": "/car-dealership/static/media/rent.c80e7030933ee3d480f3.jpg",
     "index.html": "/car-dealership/index.html",
     "main.7acaea2f.css.map": "/car-dealership/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/car-dealership/static/js/main.07d3183d.js.map"
+    "main.a44cfed9.js.map": "/car-dealership/static/js/main.a44cfed9.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/js/main.a44cfed9.js"
   ]
 }
