@@ -18,7 +18,6 @@ import {
 import { CarBase } from 'car-base';
 
 const CarItem = ({ id, handleCloseModal }) => {
-  console.log(id);
   const car = CarBase.find(car => car.id === Number(id));
   const address = car.address.split(',');
 

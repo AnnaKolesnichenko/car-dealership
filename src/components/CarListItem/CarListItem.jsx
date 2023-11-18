@@ -1,7 +1,6 @@
 import { StyledAboutLi, StyledDescription } from './CarListItem.styled';
 
 const CarListItem = ({ car, address }) => {
-  console.log(address);
   return (
     <StyledDescription>
       <div style={{ display: 'flex', flexDirection: 'row' }}>

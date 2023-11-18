@@ -11,7 +11,7 @@ import CarListItem from 'components/CarListItem/CarListItem';
 import { useState } from 'react';
 import CarItem from 'components/CarItem/CarItem';
 
-const CarList = () => {
+const CarList = ({ filtered }) => {
   const [isCarSelected, setIsCarSelected] = useState(false);
 
   const handleOpenModal = id => {
@@ -28,7 +28,7 @@ const CarList = () => {
         <CarItem id={isCarSelected} handleCloseModal={handleCloseModal} />
       )}
       <StyledCarList>
-        {CarBase.map(car => {
+        {filtered.map(car => {
           const address = car.address.split(',');
 
           return (

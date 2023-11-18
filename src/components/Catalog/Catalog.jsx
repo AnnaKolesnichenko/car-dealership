@@ -1,28 +1,53 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Container, StyledOptions } from './Catalog.styled';
 import { brandData, priceData } from './brands';
 import CarList from 'components/CarList/CarList';
+import { CarBase } from 'car-base';
+import Select from 'react-select';
 
 function Catalog() {
   const [brand, setBrand] = useState(null);
   const [price, setPrice] = useState(null);
   const [minMileage, setMinMileage] = useState('');
   const [maxMileage, setMaxMileage] = useState('');
+  const [carsFiltered, setCarsFiltered] = useState(CarBase);
+
+  const handlePriceChange = selectedOption => {
+    setPrice(selectedOption);
+  };
+
+  useEffect(() => {
+    console.log('Updated Price:', price);
+  }, [price]);
 
   const handleFilter = () => {
-    // Apply your filtering logic here based on brand, price, minMileage, and maxMileage
-    const filteredCars = brandData.filter(car => {
-      if (brand && car.brand !== brand) return false;
-      if (price && car.price !== price) return false;
-      if (minMileage !== '' && car.mileage < parseInt(minMileage)) return false;
-      if (maxMileage !== '' && car.mileage > parseInt(maxMileage)) return false;
-      return true;
-    });
+    let filteredCars = CarBase;
 
-    // Do something with the filteredCars, like updating the UI
+    if (brand === 'All' || brand === '') {
+      setCarsFiltered(CarBase);
+    }
+
+    if (brand && brand !== 'All') {
+      filteredCars = filteredCars.filter(car => car.make === brand);
+    }
+
+    if (price) {
+      filteredCars = filteredCars.filter(car => {
+        const rentalPrice = Number(car.rentalPrice.replace('$', ''));
+        return rentalPrice === price.value;
+      });
+    }
+
+    if (minMileage !== '' && maxMileage !== '') {
+      filteredCars = filteredCars.filter(
+        car => car.mileage >= minMileage && car.mileage <= maxMileage
+      );
+    }
+
+    setCarsFiltered(filteredCars);
     console.log(filteredCars);
   };
 
@@ -50,12 +75,22 @@ function Catalog() {
             />
           )}
         />
-        <Autocomplete
+        <Select
+          value={price}
+          onChange={handlePriceChange}
+          options={priceData.map(option => ({
+            label: option.label,
+            value: option.value,
+          }))}
+          placeholder="Select price"
+        />
+        {/* <Autocomplete
           value={price}
           onChange={newValue => {
             setPrice(newValue);
           }}
-          options={priceData.map(price => price.value)}
+          options={priceData.map(price => String(price.value))}
+          getOptionLabel={option => String(option)}
           renderInput={params => (
             <TextField
               {...params}
@@ -72,7 +107,7 @@ function Catalog() {
               // onChange={e => setPrice(e.target.value)}
             />
           )}
-        />
+        /> */}
 
         <TextField
           label="From"
@@ -122,7 +157,7 @@ function Catalog() {
         </Button>
       </StyledOptions>
 
-      <CarList />
+      <CarList filtered={carsFiltered} />
     </Container>
   );
 }

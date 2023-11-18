@@ -1,4 +1,5 @@
 export const brandData = [
+  'All',
   'Buick',
   'Volvo',
   'HUMMER',
