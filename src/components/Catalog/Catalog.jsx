@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
+// import Autocomplete from '@mui/material/Autocomplete';
+// import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Container, StyledOptions } from './Catalog.styled';
+import {
+  Container,
+  StyledButton,
+  StyledInput,
+  StyledOptions,
+} from './Catalog.styled';
 import { brandData, priceData } from './brands';
 import CarList from 'components/CarList/CarList';
 import { CarBase } from 'car-base';
@@ -19,19 +24,26 @@ function Catalog() {
     setPrice(selectedOption);
   };
 
+  const handleBrandChange = selectedOption => {
+    setBrand(selectedOption);
+  };
+
   useEffect(() => {
     console.log('Updated Price:', price);
-  }, [price]);
+    console.log('updated car', brand);
+    console.log('updated cars', carsFiltered);
+  }, [price, brand, carsFiltered]);
 
   const handleFilter = () => {
     let filteredCars = CarBase;
 
-    if (brand === 'All' || brand === '') {
+    if (brand && brand.value === 'All') {
       setCarsFiltered(CarBase);
+      return;
     }
 
     if (brand && brand !== 'All') {
-      filteredCars = filteredCars.filter(car => car.make === brand);
+      filteredCars = filteredCars.filter(car => car.make === brand.value);
     }
 
     if (price) {
@@ -51,10 +63,54 @@ function Catalog() {
     console.log(filteredCars);
   };
 
+  const customStyles = {
+    control: (provided, state) => ({
+      ...provided,
+      border: '1px solid #ccc',
+      borderRadius: '12px',
+      width: '200px',
+      height: '46px',
+    }),
+  };
+
   return (
     <Container>
       <StyledOptions>
-        <Autocomplete
+        <Select
+          value={brand}
+          onChange={handleBrandChange}
+          options={brandData.map(option => ({ label: option, value: option }))}
+          placeholder="Select brand"
+          styles={customStyles}
+        />
+
+        <Select
+          value={price}
+          onChange={handlePriceChange}
+          options={priceData.map(option => ({
+            label: option.label,
+            value: option.value,
+          }))}
+          placeholder="Select price"
+          styles={customStyles}
+        />
+        <StyledInput
+          type="text"
+          value={minMileage}
+          onChange={e => setMinMileage(e.target.value)}
+        />
+        <StyledInput
+          type="text"
+          value={maxMileage}
+          onChange={e => setMaxMileage(e.target.value)}
+        />
+        <StyledButton variant="contained" onClick={handleFilter}>
+          Search
+        </StyledButton>
+      </StyledOptions>
+
+      <CarList filtered={carsFiltered} />
+      {/* <Autocomplete
           value={brand}
           onChange={(event, newValue) => {
             setBrand(newValue);
@@ -74,17 +130,9 @@ function Catalog() {
               }}
             />
           )}
-        />
-        <Select
-          value={price}
-          onChange={handlePriceChange}
-          options={priceData.map(option => ({
-            label: option.label,
-            value: option.value,
-          }))}
-          placeholder="Select price"
-        />
-        {/* <Autocomplete
+        /> */}
+
+      {/* <Autocomplete
           value={price}
           onChange={newValue => {
             setPrice(newValue);
@@ -109,7 +157,7 @@ function Catalog() {
           )}
         /> */}
 
-        <TextField
+      {/* <TextField
           label="From"
           variant="outlined"
           value={minMileage}
@@ -121,7 +169,9 @@ function Catalog() {
             border: 'none',
             fontFamily: 'Manrope, sans-serif',
           }}
-        />
+        /> */}
+
+      {/* 
         <TextField
           label="To"
           variant="outlined"
@@ -135,29 +185,7 @@ function Catalog() {
             fontSize: '24px',
             fontFamily: 'Manrope, sans-serif',
           }}
-        />
-
-        <Button
-          variant="contained"
-          onClick={handleFilter}
-          sx={{
-            width: '160px',
-            height: '56px',
-            fontSize: '20px',
-            fontFamily: 'Manrope, sans-serif',
-            textTransform: 'capitalize',
-            backgroundColor: '#3470FF',
-            border: 'none',
-            paddingY: '12px',
-            paddingX: '99px',
-            borderRadius: '12px',
-          }}
-        >
-          Search
-        </Button>
-      </StyledOptions>
-
-      <CarList filtered={carsFiltered} />
+        /> */}
     </Container>
   );
 }
