@@ -134,7 +134,7 @@ export const RentalCarBtn = styled.button`
   margin-top: 14px;
   border-radius: 12px;
   border: none;
-  background-color: #3470ff;
+  background-color: #24485b;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;

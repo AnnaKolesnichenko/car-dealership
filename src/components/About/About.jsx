@@ -26,26 +26,33 @@ const About = () => {
         <StyledTitle>
           Rent <span style={{ color: '#7aafcc' }}>THE</span> Car
         </StyledTitle>
-        <div style={{ display: 'flex', gap: '90px' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+          }}
+        >
           <img
             src="https://www.svgrepo.com//show/5196/sport-car.svg"
             alt="sport car"
-            width="200px"
+            width="280px"
             stroke="white"
+            style={{ marginRight: '90px' }}
           />
           <img
             src="https://www.svgrepo.com//show/5196/sport-car.svg"
             alt="sport car"
-            width="200px"
+            width="280px"
             stroke="white"
+            style={{ marginRight: '90px' }}
           />
           <img
             src="https://www.svgrepo.com//show/5196/sport-car.svg"
             alt="sport car"
-            width="200px"
+            width="280px"
             stroke="white"
           />
-          <img src="" alt="" />
         </div>
       </Container>
     </StyledHero>

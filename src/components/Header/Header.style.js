@@ -6,17 +6,19 @@ export const StyledNav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1024px;
+  max-width: 1096px;
   padding: 36px;
-  padding-top: 0px;
+  padding-top: 20px;
   padding-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 `;
 
 export const StyledImage = styled.img`
-  width: 120px;
+  width: 190px;
   height: auto;
+  margin-bottom: 1px;
   //margin-left: 50px;
 `;
 
@@ -24,7 +26,7 @@ export const StyledList = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 50px;
+  gap: 20px;
 `;
 
 export const StyledListItem = styled(Link)`
@@ -32,7 +34,7 @@ export const StyledListItem = styled(Link)`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #2e6484;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;

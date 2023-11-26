@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledHero = styled.section`
-  height: 500px;
+  height: 700px;
   width: 100%;
   background-color: #24485b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Container = styled.div`
@@ -29,11 +32,11 @@ export const StyledServices = styled.ul`
 export const StyledService = styled.li`
   font-family: 'Manrope', sans-serif;
   color: white;
-  font-size: 22px;
+  font-size: 26px;
 `;
 
 export const StyledImage = styled.img`
-  width: 200px;
+  width: 300px;
   height: auto;
   fill: white;
 `;

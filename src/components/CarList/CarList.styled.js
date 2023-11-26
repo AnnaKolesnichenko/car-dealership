@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FiHeart } from 'react-icons/fi';
+import { IoIosHeartEmpty } from 'react-icons/io';
 
 export const StyledCarItem = styled.li`
   position: relative;
@@ -73,7 +73,7 @@ export const StyledCarList = styled.ul`
 
 export const StyledButton = styled.button`
   width: 100%;
-  background-color: rgb(52, 112, 255);
+  background-color: #24485b;
   margin-bottom: 0px;
   padding: 12px 99px;
   border: none;
@@ -86,8 +86,21 @@ export const StyledButton = styled.button`
   font-family: 'Manrope', sans-serif;
 `;
 
-export const FiHeartStyled = styled(FiHeart)`
-  position: absolute;
+export const FiHeartStyled = styled(IoIosHeartEmpty).attrs(props => ({
+  style: {
+    position: 'absolute',
+    top: '16px',
+    right: '16px',
+    width: '24px',
+    height: '24px',
+    fill: props.fillColor || 'red',
+    stroke: props.strokeColor || 'red',
+  },
+}))``;
+/* position: absolute;
   top: 16px;
   right: 16px;
-`;
+  fill: white;
+  stroke: white;
+  width: 24px;
+  height: 24px; */

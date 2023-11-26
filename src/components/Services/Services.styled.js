@@ -59,8 +59,9 @@ export const Specials = styled.div`
 export const StyledSpecials = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
   list-style: none;
   margin: 0;
   margin-top: 20px;
@@ -68,35 +69,38 @@ export const StyledSpecials = styled.ul`
 `;
 
 export const SpecialsItem = styled.li`
-  width: calc((100% - 140px) / 4);
+  width: calc((100% - 100px) / 4);
   border-bottom: 1px solid #7aafcc;
   padding: 7px;
 `;
 
 export const SpecialsTitle = styled.h2`
   font-family: 'Manrope', sans-serif;
-  text-align: center;
+  text-align: left;
   color: #24485c;
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: 2px;
   margin-top: 0;
-  margin-bottom: 50px;
-  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-top: 70px;
+  padding: 6px;
+  border-bottom: 1px solid #24485c;
 `;
 
 export const StyledDescrTitle = styled.h2`
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   color: white;
 `;
 
 export const StyledDescrP = styled.p`
   font-family: 'Manrope', sans-serif;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const StyledLink = styled.a`
+  display: block;
   text-decoration: none;
   color: #7aafcc;
   cursor: pointer;

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import logo from '../../images/rent.jpg';
+import logo from '../../images/rent.jpeg';
 import {
   StyledImage,
   StyledList,
@@ -15,32 +15,34 @@ const Header = () => {
   };
 
   return (
-    <StyledNav
-      style={{
-        maxWidth: '1184px',
-        padding: '36px',
-        paddingTop: '0px',
-        paddingBottom: '0px',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-      }}
-    >
+    <StyledNav>
       <StyledImage
         src={logo}
         alt="car dealership logotype"
         onClick={handleLogoClick}
       />
-      <div>
-        <StyledList>
-          <StyledListItem to="/catalog">Catalog</StyledListItem>
-          <StyledListItem>Favorites</StyledListItem>
-        </StyledList>
-      </div>
-      <div>
-        <StyledRegistration>
-          <StyledListItem>Login</StyledListItem>
-          <StyledListItem>SignUp</StyledListItem>
-        </StyledRegistration>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'centern',
+          alignItems: 'center',
+          gap: '20px',
+          marginTop: '4px',
+        }}
+      >
+        <div>
+          <StyledList>
+            <StyledListItem to="/catalog">Catalog</StyledListItem>
+            <StyledListItem to="/favorites">Favorites</StyledListItem>
+          </StyledList>
+        </div>
+        {/* <div>
+          <StyledRegistration>
+            <StyledListItem>LogIn</StyledListItem>
+            <StyledListItem>SignUp</StyledListItem>
+          </StyledRegistration>
+        </div> */}
       </div>
     </StyledNav>
   );

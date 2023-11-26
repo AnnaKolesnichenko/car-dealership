@@ -2,12 +2,20 @@ import { MdFreeCancellation } from 'react-icons/md';
 import { GiMagnifyingGlass } from 'react-icons/gi';
 import { GiWallet } from 'react-icons/gi';
 import { RiCarWashingFill } from 'react-icons/ri';
-import { BiMapPin } from 'react-icons/bi';
+// import { BiMapPin } from 'react-icons/bi';
+// import { FcShipped } from 'react-icons/fc';
+import { MdAddLocationAlt } from 'react-icons/md';
+import { SiAdguard } from 'react-icons/si';
+import { MdOutlineSupportAgent } from 'react-icons/md';
+import { FaHandsHoldingChild } from 'react-icons/fa6';
+import { IoCarSportSharp } from 'react-icons/io5';
+
 import {
   Container,
   Specials,
   SpecialsItem,
   SpecialsTitle,
+  SpecialsTitleWhite,
   StyledContainer,
   StyledDescrP,
   StyledDescrTitle,
@@ -19,11 +27,17 @@ import {
   StyledTitle,
 } from './Services.styled';
 
+const styling = {
+  width: '70px',
+  height: 'auto',
+  fill: 'white',
+};
+
 const Services = () => {
   return (
     <StyledContainer>
       <Container>
-        <SpecialsTitle>Our Advantages</SpecialsTitle>
+        <SpecialsTitle>Why Us:</SpecialsTitle>
         <StyledList>
           <StyledItem>
             <MdFreeCancellation
@@ -65,49 +79,86 @@ const Services = () => {
 
       <Specials>
         <Container>
-          <SpecialsTitle style={{ marginTop: '0px', color: 'white' }}>
+          <SpecialsTitle
+            style={{
+              marginTop: '0px',
+              color: 'white',
+              borderBottom: '1px solid #7aafcc',
+            }}
+          >
             Special Services
           </SpecialsTitle>
           <StyledSpecials>
             <SpecialsItem>
-              <RiCarWashingFill
-                style={{
-                  width: '70px',
-                  height: 'auto',
-
-                  fill: 'white',
-                }}
-              />
-
               <StyledDescrTitle>
-                <span style={{ color: '#7aafcc' }}>Clean cars.</span> Flexible
-                bookings.
+                <span style={{ color: '#7aafcc' }}>CASCO</span> insured cars
               </StyledDescrTitle>
+              <SiAdguard style={styling} />
+              <StyledDescrP style={{ marginBottom: '36px' }}>
+                We travel with CASCO insurance, no additional fees are implied.
+              </StyledDescrP>
+
+              <StyledLink>Find out more</StyledLink>
+            </SpecialsItem>
+
+            <SpecialsItem>
+              <StyledDescrTitle>
+                <span style={{ color: '#7aafcc' }}>Wide</span> selection
+              </StyledDescrTitle>
+              <IoCarSportSharp style={styling} />
               <StyledDescrP>
-                Working with our partners to keep you safe and in the driving
-                seat.
+                We provide a wide range of cars in every price category:
+                economic, medium price segment, luxurious.{' '}
+              </StyledDescrP>
+              <StyledLink>Find out more</StyledLink>
+            </SpecialsItem>
+
+            <SpecialsItem>
+              <StyledDescrTitle>
+                <span style={{ color: '#7aafcc' }}>24/7</span> Support
+              </StyledDescrTitle>
+              <MdOutlineSupportAgent style={styling} />
+              <StyledDescrP>
+                We will suggest routes and beautiful places. We come, we help,
+                if necessary, we change the car.
+              </StyledDescrP>
+              <StyledLink>Find out more</StyledLink>
+            </SpecialsItem>
+
+            <SpecialsItem>
+              <StyledDescrTitle>
+                <span style={{ color: '#7aafcc' }}>Security</span> for everyone
+              </StyledDescrTitle>
+              <FaHandsHoldingChild style={styling} />
+              <StyledDescrP style={{ marginBottom: '34px' }}>
+                Child seats and safety pillows are available for all car models
+                and ages.
+              </StyledDescrP>
+              <StyledLink>Find out more</StyledLink>
+            </SpecialsItem>
+
+            <SpecialsItem>
+              <StyledDescrTitle>
+                <span style={{ color: '#7aafcc' }}>Car </span>washed
+              </StyledDescrTitle>
+              <RiCarWashingFill style={styling} />
+              <StyledDescrP>
+                Working with our partners to keep you safe, comfortable and in
+                the driving seat. No smoking cars.
               </StyledDescrP>
               <StyledLink href="https://car-wash-4047.business.site/?m=true">
                 Find out more
               </StyledLink>
             </SpecialsItem>
+
             <SpecialsItem>
-              <BiMapPin
-                style={{
-                  width: '70px',
-                  height: 'auto',
-
-                  fill: 'white',
-                }}
-              />
-
               <StyledDescrTitle>
-                Convenient{' '}
-                <span style={{ color: '#7aafcc' }}>pick up and return</span>
+                <span style={{ color: '#7aafcc' }}>Convenient</span> delivery
               </StyledDescrTitle>
+              <MdAddLocationAlt style={styling} />
               <StyledDescrP>
                 We pick the car up from any locaiton you might need to leave it
-                at.
+                at. We deliver the car to your location on demand.
               </StyledDescrP>
               <StyledLink href="https://www.google.com/maps/preview">
                 Find out more
